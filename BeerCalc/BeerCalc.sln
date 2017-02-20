@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26127.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerCalc", "BeerCalc\BeerCalc.csproj", "{9B1CCCF7-5FAA-4068-88FF-3FC0DB179E85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerCalc.Tests", "BeerCalc.Tests\BeerCalc.Tests.csproj", "{71D08CB6-7FDB-4406-9024-34F045AF8F33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B1CCCF7-5FAA-4068-88FF-3FC0DB179E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1CCCF7-5FAA-4068-88FF-3FC0DB179E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1CCCF7-5FAA-4068-88FF-3FC0DB179E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1CCCF7-5FAA-4068-88FF-3FC0DB179E85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D08CB6-7FDB-4406-9024-34F045AF8F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D08CB6-7FDB-4406-9024-34F045AF8F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D08CB6-7FDB-4406-9024-34F045AF8F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D08CB6-7FDB-4406-9024-34F045AF8F33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
