@@ -87,19 +87,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\beer.png" />
+    <Content Include="Content\img\cream_pixels.png" />
+    <Content Include="Content\img\escheresque_ste.png" />
+    <Content Include="Content\fontello\css\animation.css" />
+    <Content Include="Content\fontello\css\fontello-codes.css" />
+    <Content Include="Content\fontello\css\fontello-embedded.css" />
+    <Content Include="Content\fontello\css\fontello-ie7-codes.css" />
+    <Content Include="Content\fontello\css\fontello-ie7.css" />
+    <Content Include="Content\fontello\css\fontello.css" />
+    <Content Include="Content\fontello\demo.html" />
+    <Content Include="Content\fontello\font\fontello.svg" />
+    <Content Include="Content\fontello\LICENSE.txt" />
+    <Content Include="Content\fontello\README.txt" />
+    <Content Include="Content\img\food.png" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Content\Style.css" />
+    <Content Include="Scripts\Timer.js" />
     <Content Include="Global.asax" />
+    <Content Include="Content\fontello\config.json" />
+    <Content Include="Content\fontello\font\fontello.eot" />
+    <Content Include="Content\fontello\font\fontello.ttf" />
+    <Content Include="Content\fontello\font\fontello.woff" />
+    <Content Include="Content\fontello\font\fontello.woff2" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PersonDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -109,8 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
