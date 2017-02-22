@@ -28,5 +28,9 @@ namespace BeerCalc.Models
         [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Podaj prawidłowy adres email")]
         public string Email { get; set; }
 
+
+        public double Score { get; set; }
+
+
     }
 }

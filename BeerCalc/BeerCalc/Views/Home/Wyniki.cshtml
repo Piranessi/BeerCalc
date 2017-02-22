@@ -1,0 +1,61 @@
+﻿@model BeerCalc.Models.PersonDB
+
+@{
+    ViewBag.Title = "To już wszystko :)";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Description" content="Ile możesz wypić alkoholu zanim padniesz pod stół?" />
+
+    <meta name="Keywords" content="piwo, wódka, alkohol, browar, wodka, vodka, wóda, woda, napój, procenty, volty, volt, 40%, alkoholizm, student, studenci, imrpeza" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <meta http-equiv="refresh" content="5;url=http://piranessi-001-site1.itempurl.com/home" />
+
+    <title>@ViewBag.Title - student-alkoholik.pl</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Content/fontello/css/fontello.css" type="text/css" />
+
+    <link href="~/Content/formStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+    <!--background pattern from: https://www.toptal.com/designers/subtlepatterns/food/ -->
+</head>
+<body>
+    <div class="form-container">
+        @{
+            try
+            {
+                WebMail.SmtpServer = "in-v3.mailjet.com";
+                WebMail.SmtpPort = 587;
+                WebMail.EnableSsl = true;
+                WebMail.UserName = "c6ce654144d54b6607564dc95b3c5467";
+                WebMail.Password = "16651f14b701baae87a9414b27b985b7";
+                WebMail.From = "student-alkoholik@o2.pl";
+                WebMail.Send(Model.Email, "Wynik testu alkoholowego",
+                Model.Name + ",<br />" + "Wyniki twojego testu są następujące: <br />" + "Możesz wypić około " + Model.Score + " browarów :) <br /><br />Z poważaniem, <br />Student Alkoholik");
+            }
+            catch (Exception)
+            {
+                @:<b>Przepraszamy - nie możemy wysłać wiadomości.</b>
+            }
+        }
+
+        <h1 style="text-align: center; margin-top: 60px;">To już wszystko :)</h1>
+        <h2 style="text-align: center;">Za 5 sekund nastąpi automatyczne przekierowanie na stronę główną</h2>
+        <h3 style="text-align: center;">Sprawdź swojego maila :)</h3>
+
+    </div>
+</body>
+</html>

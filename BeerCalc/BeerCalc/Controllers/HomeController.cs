@@ -9,15 +9,11 @@ namespace BeerCalc.Controllers
 {
     public class HomeController : Controller
     {
-        private string Powitanie()
-        {
-            return DateTime.Now.Hour > 12 ? "Witamy :)" : "Masz zamiar pić przed 12? To znaczy, że powinieneś do nas dołączyć! :)";
-        }
 
         // GET: Home
         public ActionResult Index()
         {
-            ViewBag.Tekst = Powitanie();
+            ViewBag.Tekst = DateTime.Now.Hour > 12 ? "Witamy :)" : "Masz zamiar pić przed 12? To znaczy, że powinieneś do nas dołączyć! :)";
             return View();
         }
 
@@ -31,9 +27,15 @@ namespace BeerCalc.Controllers
         [HttpPost]
         public ActionResult ZrobTest(PersonDB daneOsoby)
         {
-            if (ModelState.IsValid) return View("Wyniki", daneOsoby);
+            if (ModelState.IsValid)
+            {
+                daneOsoby.Score = Math.Ceiling((daneOsoby.Height * 0.12) + (daneOsoby.Age * 0.3) + (daneOsoby.Weight*0.4) + (daneOsoby.Expierience * 0.15));
+                return View("Wyniki", daneOsoby);
+            }
             else return View();
         }
+
+
 
 
     }
