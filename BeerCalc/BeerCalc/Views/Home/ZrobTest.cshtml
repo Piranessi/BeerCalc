@@ -1,0 +1,121 @@
+﻿@model BeerCalc.Models.PersonDB
+
+@{
+    ViewBag.Title = "Zrób test :)";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Description" content="Ile możesz wypić alkoholu zanim padniesz pod stół?" />
+
+    <meta name="Keywords" content="piwo, wódka, alkohol, browar, wodka, vodka, wóda, woda, napój, procenty, volty, volt, 40%, alkoholizm, student, studenci, imrpeza" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <title>@ViewBag.Title - student-alkoholik.pl</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Content/fontello/css/fontello.css" type="text/css" />
+
+    <link href="~/Content/formStyle.css" rel="stylesheet" type="text/css" />
+
+
+    <!--background pattern from: https://www.toptal.com/designers/subtlepatterns/food/ -->
+</head>
+<body>
+
+    <div class="form-container">
+
+        <h2>Wypełnij formularz :)</h2>
+
+        @using (Html.BeginForm())
+        {
+
+            <div class="form-containerLeft">
+
+                <label>Imię</label>
+                @Html.TextBoxFor(x => x.Name)
+
+
+
+                <label>Adres email:</label>
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+
+
+
+                <label>Wiek</label>
+                @Html.DropDownListFor(x => x.Age, new[]
+               {
+                   new SelectListItem() {Text = "18", Value = "18"},
+                   new SelectListItem() {Text = "19", Value = "19"},
+                   new SelectListItem() {Text = "20", Value = "20"},
+                   new SelectListItem() {Text = "21", Value = "21"},
+                   new SelectListItem() {Text = "22", Value = "22"},
+                   new SelectListItem() {Text = "23", Value = "23"},
+                   new SelectListItem() {Text = "24", Value = "24"},
+                   new SelectListItem() {Text = "25", Value = "25"},
+                   new SelectListItem() {Text = "26", Value = "26"},
+                   new SelectListItem() {Text = "27", Value = "27"},
+                   new SelectListItem() {Text = "28", Value = "28"},
+                   new SelectListItem() {Text = "29", Value = "29"},
+                   new SelectListItem() {Text = "30", Value = "30"},
+                   new SelectListItem() {Text = ">30", Value = "35"}
+               }, "Ile masz lat?")
+
+                <label>Masa</label>
+                @Html.DropDownListFor(x => x.Weight, new[]
+               {
+                   new SelectListItem() {Text = "40kg-50kg", Value = "1"},
+                   new SelectListItem() {Text = "51kg-60kg", Value = "2"},
+                   new SelectListItem() {Text = "61kg-70kg", Value = "3"},
+                   new SelectListItem() {Text = "71kg-80kg", Value = "4"},
+                   new SelectListItem() {Text = "81kg-90kg", Value = "4"},
+                   new SelectListItem() {Text = ">90kg", Value = "5"},
+               }, "Ile ważysz?")
+
+                <label>Wzrost</label>
+                @Html.DropDownListFor(x => x.Height, new[]
+               {
+                   new SelectListItem() {Text = "140cm-150cm", Value = "0.7"},
+                   new SelectListItem() {Text = "151cm-160cm", Value = "1"},
+                   new SelectListItem() {Text = "161cm-170cm", Value = "2"},
+                   new SelectListItem() {Text = "171cm-180cm", Value = "3"},
+                   new SelectListItem() {Text = "181cm-190cm", Value = "4"},
+                   new SelectListItem() {Text = "191cm-200cm", Value = "4"},
+                   new SelectListItem() {Text = ">201cm", Value = "5"},
+               }, "Ile masz wzrostu?")
+
+                <label>Doświadczenie w piciu</label>
+                @Html.DropDownListFor(x => x.Expierience, new[]
+               {
+                   new SelectListItem() {Text = "1", Value = "1"},
+                   new SelectListItem() {Text = "2", Value = "2"},
+                   new SelectListItem() {Text = "3", Value = "3"},
+                   new SelectListItem() {Text = "4", Value = "4"},
+                   new SelectListItem() {Text = "5", Value = "5"},
+                   new SelectListItem() {Text = ">6", Value = "6"}
+               }, "Ile lat już pijesz?")
+
+         </div>
+
+        <div class="form-containerRight">
+
+            <button class="button" type="submit" style="margin-top: 20px; margin-bottom: 10px;"><span>Dalej</span></button>
+            @Html.ValidationSummary()
+
+        </div>
+        }
+
+
+    </div>
+
+</body>
+</html>
+

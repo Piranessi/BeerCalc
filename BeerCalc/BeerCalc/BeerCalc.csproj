@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\formStyle.css" />
     <Content Include="Content\img\beer.png" />
     <Content Include="Content\img\cream_pixels.png" />
     <Content Include="Content\img\escheresque_ste.png" />
@@ -139,6 +140,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ZrobTest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
